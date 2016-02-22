@@ -1,0 +1,24 @@
+{
+    "emailList": [
+        {
+            "title": "email test 1", 
+            "content": "7:00 all hands meeting"
+        }, 
+        {
+            "title": "email test 2",
+            "content": "8:00 sync with Redmond team"
+        }, 
+        {
+            "title": "email test 3",
+            "content": "10:00 scrum meeting."
+        }, 
+        {
+            "title": "email test 4",
+            "content": "12:00 team lunch"
+        },
+        {
+            "title": "email test 5",
+            "content": "14:00 design review"
+        }
+    ]
+}
