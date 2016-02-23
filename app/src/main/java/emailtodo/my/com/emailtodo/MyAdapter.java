@@ -62,9 +62,9 @@ public class MyAdapter extends BaseAdapter {
 
 		return convertView;
 	}
-}
 
-class ViewHolder {
-	TextView titleText;
-	TextView contentText;
+	class ViewHolder {
+		TextView titleText;
+		TextView contentText;
+	}
 }

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
@@ -21,7 +22,7 @@ import emailtodo.my.com.emailtodo.contract.Info;
 
 public class EmailListActivity extends AppCompatActivity {
     ArrayList<Info> mList;
-
+    Button goToTodoListButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,14 @@ public class EmailListActivity extends AppCompatActivity {
                 Intent intent = new Intent(EmailListActivity.this, ExtractTodoActivity.class);
                 intent.putExtra(ExtractTodoActivity.KeyContent, mList.get(position).content);
                 startActivity(intent);
+            }
+        });
+
+        goToTodoListButton = (Button) findViewById(R.id.goto_todo_list_button);
+        goToTodoListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(EmailListActivity.this, TodoListActivity.class));
             }
         });
     }

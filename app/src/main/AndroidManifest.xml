@@ -18,6 +18,9 @@
 
         <activity android:name=".ExtractTodoActivity">
         </activity>
+
+        <activity android:name=".TodoListActivity">
+        </activity>
     </application>
 
 </manifest>
