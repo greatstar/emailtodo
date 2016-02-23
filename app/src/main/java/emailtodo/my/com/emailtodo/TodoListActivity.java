@@ -29,6 +29,7 @@ public class TodoListActivity extends AppCompatActivity {
     public static String LineDivider = ";;;";
     public static String ItemDivider = ",,,";
 
+    // Persist data by SharedPreferences
     public static void putString(Context context, String keyName, String value) {
         if (TextUtils.isEmpty(keyName)) {
             return;

@@ -9,25 +9,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="emailtodo.my.com.emailtodo.EmailListActivity">
 
+    <!-- android:layout_above="@+id/goto_todo_list_button" -->
     <ListView
         android:id="@+id/listview_infos"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_above="@+id/goto_todo_list_button">
-
+        >
     </ListView>
 
-    <Button
-        android:id="@+id/goto_todo_list_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:paddingTop="10dp"
-        android:text="Todo List"
-        android:textSize="22sp" />
+    <!-- TODO add button -->
 </RelativeLayout>

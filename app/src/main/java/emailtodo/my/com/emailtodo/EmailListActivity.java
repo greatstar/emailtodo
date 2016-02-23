@@ -23,33 +23,23 @@ import emailtodo.my.com.emailtodo.contract.Info;
 public class EmailListActivity extends AppCompatActivity {
     ArrayList<Info> mList;
     Button goToTodoListButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_email_list);
         ListView mListView = (ListView) findViewById(R.id.listview_infos);
 
+        // Read mock data from local files
         String dataString = readAssets("data/MockData.txt");
+        // Use Gson lib to parse json data
         EmailList list = new Gson().fromJson(dataString, new TypeToken<EmailList>() {}.getType());
         mList = list.emailList;
         MyAdapter mAdapter = new MyAdapter(this, mList);
         mListView.setAdapter(mAdapter);
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(EmailListActivity.this, ExtractTodoActivity.class);
-                intent.putExtra(ExtractTodoActivity.KeyContent, mList.get(position).content);
-                startActivity(intent);
-            }
-        });
+        // TODO click item to go to ExtractTodoActivity.class, with extra ExtractTodoActivity.KeyContent -> email content
 
-        goToTodoListButton = (Button) findViewById(R.id.goto_todo_list_button);
-        goToTodoListButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(EmailListActivity.this, TodoListActivity.class));
-            }
-        });
+        // TODO initialize button and click it to go to TodoListActivity
     }
 
 
